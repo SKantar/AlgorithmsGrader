@@ -1,12 +1,3 @@
-# docker run --rm -v "$(pwd)":/mnt --workdir /mnt frolvlad/alpine-php ./run_php example.php [|input]
-# docker run --rm -v "$(pwd)":/mnt --workdir /mnt frolvlad/alpine-python2 ./run_python2 example2.py [|input]
-# docker run --rm -v "$(pwd)":/mnt --workdir /mnt frolvlad/alpine-python3 ./run_python3 example3.py [|input]
-
-# docker run --rm -v "$(pwd)":/mnt --workdir /mnt frolvlad/alpine-gcc ./compile_and_run_c qq.c [|input.tx]
-# docker run --rm -v "$(pwd)":/mnt --workdir /mnt frolvlad/alpine-oraclejdk8:slim ./compile_and_run_java Main.java [|input.tx]
-# docker run --rm -v "$(pwd)":/mnt --workdir /mnt frolvlad/alpine-mono ./compile_and_run_mono qq.mono [|input.tx]
-
-
 LANGUAGES = ["java", "c", "c#", "mono", "python", "python2", "python3", "php"]
 
 SCRIPTS = {
