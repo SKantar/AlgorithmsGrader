@@ -88,5 +88,5 @@ register_test(
 
 **Prerequsite**:
     Install python3.5, preferably use a virtualenv.
-    Install [docker][https://www.docker.com/] for linux
+    Install [docker](https://www.docker.com/) for linux
 
