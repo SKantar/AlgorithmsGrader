@@ -96,6 +96,7 @@ To tester on a solution, run `python __main__.py <language> <tester_file> <solut
 
 For example, to run the above tester (in the tests folder) on the sample solution:
 ```bash
+cd grader
 python __main__.py python3 tests/sort_function/grade_function.py tests/sort_function/correct_solution.py
 ```
 
