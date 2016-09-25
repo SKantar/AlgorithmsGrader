@@ -14,7 +14,7 @@ For the teacher, the advantage over using normal unit tests is that it allows to
 ###Task statement
 Write Python program to sort N numbers in ascending order using Bubble sort
 
-###Tester [grade_function.py](grader/grader/tests/sort_function/grade_function.py)
+###Tester [grade_function.py](grader/tests/sort_function/grade_function.py)
 ```python
 from grader import decorators
 from grader import utils
@@ -52,7 +52,8 @@ def register_test(description, input, timeline=1, template="${code}"):
             if i == 0:
                 continue
             if x[i] < test:
-                raise Exception("Ocekivana vrednost '%s', dobijena '%s'" % (str(sorted(x)), str(m.response)))
+                raise Exception("Ocekivana vrednost '%s', dobijena '%s'" %
+                                (str(sorted(x)), str(m.response)))
 
 
 register_test(
