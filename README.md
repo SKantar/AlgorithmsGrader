@@ -19,7 +19,6 @@ Write Python program to sort N numbers in ascending order using Bubble sort
 ```python
 from grader import decorators
 from grader import utils
-import ast
 
 template="""${code}
 alist = []
@@ -89,6 +88,14 @@ register_test(
 ## Setup
 
 **Prerequsite**:<br/>
-    Install [python3.5](https://www.python.org), preferably use a virtualenv.<br/>
-    Install [docker](https://www.docker.com/) for linux<br/>
+    - Install [python3.5](https://www.python.org), preferably use a virtualenv.<br/>
+    - Install [docker](https://www.docker.com/) for linux<br/>
+
+### Running test on a file
+To tester on a solution, run `python __main__.py <language> <tester_file> <solution_file>`.
+
+For example, to run the above tester (in the tests folder) on the sample solution:
+```bash
+python __main__.py python3 tests/sort_function/grade_function.py tests/sort_function/correct_solution.py
+```
 

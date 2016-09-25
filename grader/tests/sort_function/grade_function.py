@@ -34,7 +34,8 @@ def register_test(description, input, timeline=1, template="${code}"):
             if i == 0:
                 continue
             if x[i] < test:
-                raise Exception("Ocekivana vrednost '%s', dobijena '%s'" % (str(sorted(x)), str(m.response)))
+                raise Exception("Ocekivana vrednost '%s', dobijena '%s'" %
+                                (str(sorted(x)), str(m.response)))
 
 
 register_test(
