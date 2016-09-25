@@ -1,0 +1,30 @@
+
+
+from os import path
+from sys import argv, exit
+from grader.working_directory import WorkingDirectory
+from grader.execution import call_test_function
+from grader.config import SCRIPTS
+
+if len(argv) < 5:
+    print("Usage: run_test <lang> <tester-path> <solution-path> <test-index>")
+    exit(1)
+
+language = argv[1]
+tester_path = argv[2]
+solution_path = argv[3]
+other_files = []
+test_index = int(argv[5])
+
+
+CURRENT_FOLDER = path.abspath(path.dirname(__file__))
+SCRIPTS_FOLDER = path.join(CURRENT_FOLDER, "scripts")
+if SCRIPTS[language] != 'None':
+    SCRIPT = path.join(SCRIPTS_FOLDER, SCRIPTS[language])
+    other_files.append(SCRIPT)
+
+with WorkingDirectory(language, tester_path, solution_path, other_files=other_files) as directory:
+    """ Copy file to, new, temporary directory and check test case
+        with test_index
+    """
+    call_test_function(test_index, language, directory.tester_path, directory.solution_path)
