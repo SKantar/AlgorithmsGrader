@@ -13,7 +13,7 @@ For the teacher, the advantage over using normal unit tests is that it allows to
 ## Example
 
 ###Task statement
-Write Python program to sort N numbers in ascending order using Bubble sort
+Write Python function 'bubbleSort(list)' to sort N numbers in ascending order using Bubble sort
 
 ###Tester [grade_function.py](grader/tests/sort_function/grade_function.py)
 ```python
