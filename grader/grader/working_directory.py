@@ -14,12 +14,15 @@ EXTENSIONS = {
     'php': '.php'
 }
 
+
 class WorkingDirectory(object):
     """
         Class represent current working directory
     """
 
-    def __init__(self, language, tester_path, solution_path, other_files=list(), is_code=False, add_to_path=True):
+    def __init__(self, language, tester_path,
+                 solution_path, other_files=list(),
+                 is_code=False, add_to_path=True):
         self.path = mkdtemp()
         if is_code:
             creator_function = self._write
@@ -27,7 +30,8 @@ class WorkingDirectory(object):
             creator_function = self._copy
 
         self.tester_path = creator_function(tester_path)
-        self.solution_path = creator_function(solution_path, language=language)
+        self.solution_path = creator_function(solution_path,
+                                              language=language)
 
         self.other_files = list(map(self._copy, other_files))
 
@@ -81,11 +85,13 @@ class WorkingDirectory(object):
     def files_in_path(self):
         return os.listdir(self.path)
 
-    def __enter__(self): 
+    def __enter__(self):
         return self
 
     def __exit__(self, *args):
         self.remove()
 
     def __str__(self):
-        return "<Assets: %s %s %s>" % (self.tester_path, self.solution_path, self.other_files)
+        return "<Assets: %s %s %s>" % (self.tester_path,
+                                       self.solution_path,
+                                       self.other_files)
