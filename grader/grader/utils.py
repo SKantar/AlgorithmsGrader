@@ -6,7 +6,8 @@ def import_module(path, name=None):
     if name is None:
         name = path
     import importlib.machinery
-    loader = importlib.machinery.SourceFileLoader(name, path)
+    loader = importlib.machinery.SourceFileLoader(name,
+                                                  path)
     module = loader.load_module(name)
     return module
 

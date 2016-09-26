@@ -54,7 +54,8 @@ class WorkingDirectory(object):
         # returns path
         if os.path.isdir(file_path):
             files = os.listdir(file_path)
-            return [self._copy(os.path.join(file_path, name)) for name in files]
+            return [self._copy(os.path.join(file_path, name))
+                    for name in files]
         return copy(file_path, self.path)
 
     def _write(self, code, language='python'):

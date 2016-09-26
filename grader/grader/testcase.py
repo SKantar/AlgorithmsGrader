@@ -44,7 +44,11 @@ class TestCase(object):
         test_index = list(testcases.keys()).index(self._name)
 
         start = time()
-        success, stdout, stderr = call_test(test_index, language, tester_path, solution_path, self._options) # call terminal command
+        success, stdout, stderr = call_test(test_index,
+                                            language,
+                                            tester_path,
+                                            solution_path,
+                                            self._options) # call terminal command
         end = time()
 
         result = RESULT_DEFAULTS.copy()
