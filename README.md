@@ -1,6 +1,6 @@
 Hybrid Algorithms Grader
 =============
-(Python 3, Python 2, Java, C/C++, C#, PHP)
+(Python 3, Python 2, Java, C/C++, C#, PHP ...)
 
 This is a module for automatically testing homework solutions that has been used for giving feedback for homeworks and midterms for various first-year programming courses.
 
